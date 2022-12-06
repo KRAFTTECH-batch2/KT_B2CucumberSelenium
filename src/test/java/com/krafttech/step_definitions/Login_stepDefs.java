@@ -1,10 +1,18 @@
 package com.krafttech.step_definitions;
 
+import com.krafttech.pages.LoginPage;
+import com.krafttech.utilities.BrowserUtils;
+import com.krafttech.utilities.ConfigurationReader;
+import com.krafttech.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Login_stepDefs {
+
+    LoginPage loginPage=new LoginPage();
+
 
     @Given("The user is on the login page")
     public void the_user_is_on_the_login_page() {
@@ -42,6 +50,32 @@ public class Login_stepDefs {
         System.out.println("I enter Rosa username and password and click login button");
     }
 
+    @Given("User should be on the login page")
+    public void user_should_be_on_the_login_page() {
+        Driver.get().get(ConfigurationReader.get("url"));
+    }
+    @When("User should input login information")
+    public void user_should_input_login_information() {
+        loginPage.loginUser();
+    }
+
+    @Then("User should be on home page")
+    public void user_should_be_on_home_page() {
+
+        BrowserUtils.waitFor(3);
+
+        String actualTitle= Driver.get().getTitle();
+        System.out.println("actualTitle = " + actualTitle);
+
+        Assert.assertEquals("Verify Title","Dashboard - Kraft Techex Lab - aFm",actualTitle);
+    }
 
 
+    @When("User should input {string} and {string}")
+    public void userShouldInputAnd(String email, String password) {
+
+        loginPage.loginWithParameters(email,password);
+
+
+    }
 }
