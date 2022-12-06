@@ -17,6 +17,7 @@ Feature: Krafttech Log in Test
     Given The user is on the login page
     When The user enters Jhon Nash credentials
     Then The user should be able to login
+  
   @SDET  @smoke  @db
   Scenario: Login as Rosa
     Given The user is on the login page
