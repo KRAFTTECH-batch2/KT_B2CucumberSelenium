@@ -1,5 +1,6 @@
 package com.krafttech.step_definitions;
 
+import com.krafttech.pages.DashboardPage;
 import com.krafttech.pages.LoginPage;
 import com.krafttech.utilities.BrowserUtils;
 import com.krafttech.utilities.ConfigurationReader;
@@ -9,9 +10,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.lang.reflect.MalformedParameterizedTypeException;
+import java.util.Map;
+
 public class Login_stepDefs {
 
     LoginPage loginPage=new LoginPage();
+
+    DashboardPage dashboardPage=new DashboardPage();
 
 
     @Given("The user is on the login page")
@@ -78,4 +84,21 @@ public class Login_stepDefs {
 
 
     }
+
+    @Then("User should input following credentials")
+    public void user_should_input_following_credentials(Map<String,String> userInfo) {
+
+        loginPage.loginWithParameters(userInfo.get("email"),userInfo.get("password"));
+
+        String actualName= dashboardPage.getUserName();
+        String expectedName=userInfo.get("Name");
+
+        System.out.println("actualName = " + actualName);
+        System.out.println("expectedName = " + expectedName);
+
+        Assert.assertEquals(expectedName,actualName);
+
+
+    }
+
 }

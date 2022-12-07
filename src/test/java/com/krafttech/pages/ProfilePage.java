@@ -81,7 +81,6 @@ public class ProfilePage extends BasePage {
 
 
 
-
     @FindBy(xpath = "//a[@class='nav-link collapsed']")
     public List<WebElement>profileOptions;
 
