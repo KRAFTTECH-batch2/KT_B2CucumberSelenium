@@ -69,5 +69,10 @@ protected WebDriver driver;
         return getUserName.getText();
     }
 
+    public String getHomeName(String homeName){
+        BrowserUtils.waitFor(1);
+        return Driver.get().findElement(By.xpath("//li[text()='"+homeName+"']")).getText();
+    }
+
 
 }

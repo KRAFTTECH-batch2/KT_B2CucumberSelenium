@@ -21,6 +21,13 @@ public  abstract class BasePage {
     }
 
 
+    public void naviagateToTab(String tabName){
+        driver=Driver.get();
+        driver.findElement(By.xpath("//nav//span[.='"+tabName+"']")).click();
+
+    }
+
+
     public void navigateToModule(String tab, String module) {
 
         driver=Driver.get();
@@ -36,7 +43,6 @@ public  abstract class BasePage {
            driver.findElement(By.xpath(moduleLocator)).click();
             BrowserUtils.waitForVisibility(By.xpath(moduleLocator), 5);
             BrowserUtils.scrollToElement(driver.findElement(By.xpath(moduleLocator)));
-
 
         }
 

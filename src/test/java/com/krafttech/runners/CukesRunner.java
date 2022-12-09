@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
                 plugin = {"json:target/cucumber.json",
-                        "html:target/default-html-reports"},
+                        "html:target/default-html-reports.html"},
                 features = "src/test/resources/features",
                 glue = "com/krafttech/step_definitions",
                 dryRun = false,
