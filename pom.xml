@@ -59,6 +59,7 @@
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
 
+
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                   <!--  <rerunFailingTestsCount>1</rerunFailingTestsCount>-->
