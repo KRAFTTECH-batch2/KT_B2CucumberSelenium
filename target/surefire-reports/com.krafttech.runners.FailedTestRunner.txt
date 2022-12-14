@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.krafttech.runners.FailedTestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 12.366 s <<< FAILURE! - in com.krafttech.runners.FailedTestRunner
-Navigate to menu with parameter.Harun navigates to edit profile mneu  Time elapsed: 5.812 s  <<< FAILURE!
-org.junit.ComparisonFailure: Verify that name is match expected:<[Haru]n> but was:<[Rabinso]n>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at com.krafttech.step_definitions.Dashboard_stepDefs.the_user_name_should_be(Dashboard_stepDefs.java:15)
-	at ✽.The user name should be "Harun"(file:///C:/Users/Fatih/IdeaProjects/KT_B2CucumberSelenium/src/test/resources/features/navigateMenuWithParameter.feature:7)
-
-Navigate to menu with parameter.Harun navigates to edit profile mneu  Time elapsed: 6.468 s  <<< FAILURE!
-org.junit.ComparisonFailure: Verify that name is match expected:<[Haru]n> but was:<[Rabinso]n>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at com.krafttech.step_definitions.Dashboard_stepDefs.the_user_name_should_be(Dashboard_stepDefs.java:15)
-	at ✽.The user name should be "Harun"(file:///C:/Users/Fatih/IdeaProjects/KT_B2CucumberSelenium/src/test/resources/features/navigateMenuWithParameter.feature:7)
-
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.krafttech.runners.FailedTestRunner

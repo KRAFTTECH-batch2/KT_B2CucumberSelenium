@@ -31,7 +31,7 @@ Feature: Krafttech Log in Test
     When User should input login information
     Then User should be on home page
 
-
+  @sss
   Scenario: Login with parameters
     When User should input "user22@test.com" and "Test123456"
     Then User should be on home page
