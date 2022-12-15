@@ -9,7 +9,7 @@ Feature: Profile Tests
     And User should input the information boxes
     Then User should verify the profile updated message
 
-  @wip
+  @wip1
   Scenario: User should be able to see profile options
     When User should input "user22@test.com" and "Test123456"
     Then User should see the profile options
